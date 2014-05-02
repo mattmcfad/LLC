@@ -337,13 +337,13 @@ a {
     line-height: 32px;
   }
 }
-/****************************************************
+/**********************************************************
 
-************           MEDIA           *****************
+************           MEDIA           ********************
 
 ***********************************************************
- *******************     TOP NAV        ********************
- ***********************************************************/
+*******************     TOP NAV        ********************
+***********************************************************/
 @media (max-width: 600px) {
   h1 {
     padding: 0 auto;
@@ -367,23 +367,21 @@ a {
     background: black;
     border-bottom: 5px solid white;
     box-shadow: 0 1px 10px #808184;
-    transform: rotate(90deg);
     padding: 0;
   }
-  .sidebar h1 {
-    top: 15px;
-  }
-  .sidebar h1 a {
-    display: block;
-    margin: 0 auto;
+  .sidebar a h1 {
+    width: 150px;
+    height: 81px;
     position: static;
+    margin: 0 auto;
+    display: block;
   }
-  .sidebar .nav-menu {
+  .sidebar ul.nav-menu {
     top: 150px;
   }
-  .sidebar .nav-menu ul li {
-    float: left;
-    width: 20%;
+  .sidebar ul.nav-menu li {
+    display: inline-block;
+    background: 1px solid yellow;
   }
 
   .credits, .social-media, .twitter {

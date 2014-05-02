@@ -231,13 +231,13 @@ a {
     line-height: 32px;
   }
 }
-/****************************************************
+/**********************************************************
 
-************           MEDIA           *****************
+************           MEDIA           ********************
 
 ***********************************************************
- *******************     TOP NAV        ********************
- ***********************************************************/
+*******************     TOP NAV        ********************
+***********************************************************/
 
 @media (max-width: 600px) {
 
@@ -263,30 +263,32 @@ a {
     background: black;
     border-bottom: 5px solid $white;
     box-shadow: 0 1px 10px $grey;
-    transform: rotate(90deg);
+    // transform: rotate(90deg);
     padding: 0;
 
-    h1 {
-      top: 15px;
-      a {
-        display: block;
-        margin: 0 auto;
-        position: static;
-      }
+    a h1 {
+      width: 150px;
+      height: 81px;
+      position: static;
+      margin: 0 auto;
+      display: block;
+      
+      
+
     }
    
-    .nav-menu {
+    ul.nav-menu {
       top: 150px;
 
-      ul {
-
-        li {
-          float: left;
-          width: 20%;
-        }
-        
-      }   
       
+
+      li {
+        display: inline-block;
+        background: 1px solid yellow;
+
+      
+      }
+          
     }//nav-menu
 
   }//sidebar
