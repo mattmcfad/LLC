@@ -194,25 +194,45 @@ a {
 
 .sidebar {
   position: fixed;
+  z-index: 99;
   top: 0;
   bottom: 0;
-  padding: 90px 0 30px 43px;
+  padding: 0 0 30px 43px;
   width: 230px;
-  background: rgba(0, 0, 0, 0.95);
-  overflow: hidden;
+  background: url(../media/bg-nav.png) repeat-y;
 }
-.sidebar li a {
+.sidebar h1 {
+  position: absolute;
+  top: 90px;
+  text-indent: -100000px;
+  background: url(../media/logo-ladieslearningcode.png) no-repeat;
+}
+.sidebar h1 a {
+  width: 150px;
+  height: 81px;
+}
+.sidebar .nav-menu {
+  position: absolute;
+  top: 265px;
+}
+.sidebar .nav-menu li {
+  padding-bottom: 10px;
+}
+.sidebar .nav-menu li a {
+  font-size: 20px;
   color: white;
+  font-weight: 300;
 }
-.sidebar li a:hover {
+.sidebar .nav-menu li a:hover {
   color: #b1009a;
 }
-.sidebar li a:hover:before {
+.sidebar .nav-menu li a:hover:before {
   content: "_";
 }
 
 .footer {
   position: absolute;
+  bottom: 30px;
 }
 
 h1 {
@@ -258,16 +278,23 @@ h1 a {
   float: left;
   width: 14.9%;
   margin-right: 6.89%;
+  font-size: 20px;
 }
 .feature h3, .feature a, .feature p {
   font-weight: 300;
 }
 .feature p, .feature a {
-  color: #1c1c1c;
+  color: #808184;
   padding: 5px 0;
 }
 .feature a {
   color: #b1009a;
+  padding-left: 28px;
+  background: url(../media/icon-cta-25x25.png) no-repeat;
+  background-position: 0px 0px;
+}
+.feature a:hover {
+  background-position: -25px 0px;
 }
 
 .feature + .feature + .feature {
@@ -302,20 +329,29 @@ h1 a {
 
   .sidebar {
     height: 230px;
+    width: 100%;
     left: 0;
     right: 0;
     top: auto;
     bottom: auto;
+    background-image: none;
+    background: black;
+    border-bottom: 5px solid white;
+    box-shadow: 0 1px 10px #808184;
+    transform: rotate(90deg);
     padding: 0;
-    width: auto;
+  }
+  .sidebar h1 {
+    padding: 50px;
+  }
+  .sidebar .nav-menu {
+    top: 150px;
+  }
+  .sidebar .nav-menu ul li {
+    display: inline-block;
   }
 
-  .nav-menu li {
-    float: left;
-    width: 17%;
-  }
-
-  .credits, .social-media {
+  .credits, .social-media, .twitter {
     display: none;
   }
 }
