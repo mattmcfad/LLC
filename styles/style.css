@@ -1,180 +1,322 @@
 *, *:before, *:after {
-  -webkit-box-sizing: border-box; 
-  	 -moz-box-sizing: border-box;
-   		  box-sizing: border-box;
- }
-
-article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
-input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
-
-.clearfix:after {
-   content: " ";
-   visibility: hidden;
-   display: block;
-   height: 0;
-   clear: both;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-
-* {
-	margin: 0;
-	padding: 0;
-}
-ul {
-	list-style: none;
-	padding: 0;
-}
-a {
-	text-decoration: none;
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block;
 }
 
-.content {
-	margin-left: 230px;
+audio, canvas, video {
+  display: inline-block;
 }
 
-.wrapper {
-	max-width: 1100px;
-	margin-right: auto;
-	background-color: red;
-	height: 100%;
-	min-height: 100%;
+audio:not([controls]) {
+  display: none;
+  height: 0;
 }
 
-.sidebar {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	padding: 90px 0 30px 43px;
-	width: 230px;
-	background: rgba(0,0,0,0.95);
-	overflow: hidden;
+[hidden] {
+  display: none;
 }
 
-.sidebar li a { 
-	color: white;
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
-.sidebar a:hover:before {
-	content: "_";
-
+a:focus {
+  outline: thin dotted;
 }
 
-.footer {
-	position: absolute;
-
+a:active, a:hover {
+  outline: 0;
 }
 
 h1 {
-	position: absolute;
-	top: 90px;
-	left: 23px;
-	text-indent: -100000px;
-	background: url(../media/logo-ladieslearningcode.png) no-repeat;
-	
+  font-size: 2em;
 }
 
-h1 a {
-	width: 150px;
-	height: 81px;
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: \201C \201D \2018 \2019;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.5em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+button, input {
+  line-height: normal;
+}
+
+button, html input[type=button],
+input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], input[disabled] {
+  cursor: default;
+}
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body, figure {
+  margin: 0;
+}
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.clearfix:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 .content {
-	position: relative;
-	padding: 0 3.45% 0 5.74%;
-	float: left;
-	width: 80%;
+  margin-left: 230px;
+}
 
+.wrapper {
+  max-width: 1100px;
+  margin-right: auto;
+  background-color: red;
+  height: 100%;
+  min-height: 100%;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  padding: 90px 0 30px 43px;
+  width: 230px;
+  background: rgba(0, 0, 0, 0.95);
+  overflow: hidden;
+}
+.sidebar li a {
+  color: white;
+}
+.sidebar li a:hover {
+  color: #b1009a;
+}
+.sidebar li a:hover:before {
+  content: "_";
+}
+
+.footer {
+  position: absolute;
+}
+
+h1 {
+  position: absolute;
+  top: 90px;
+  left: 23px;
+  text-indent: -100000px;
+  background: url(../media/logo-ladieslearningcode.png) no-repeat;
+}
+h1 a {
+  width: 150px;
+  height: 81px;
+}
+
+.content {
+  position: relative;
+  padding: 0 3.45% 0 5.74%;
+  float: left;
+  width: 80%;
+}
+.content h2 {
+  font-family: 'Helvetica','Arial','sans-serif';
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 52px;
+  margin: 0;
+  padding: 0;
+  padding-top: 256px;
 }
 
 .twitter {
-	display: inline-block;
-	max-width: 25%;
-	padding-top: 90px;
-	padding-left: 1.7%;
-	position: absolute;
-	right: 30px;
-	border-left: 1px solid grey;
+  display: inline-block;
+  max-width: 25%;
+  padding-top: 90px;
+  padding-left: 1.7%;
+  position: absolute;
+  right: 30px;
+  border-left: 1px solid grey;
 }
 
 .feature {
-	margin-top: 50px;
-	float: left;
-	width: 14.9%;
-	margin-right: 6.89%;
+  margin-top: 50px;
+  float: left;
+  width: 14.9%;
+  margin-right: 6.89%;
+}
+.feature h3, .feature a, .feature p {
+  font-weight: 300;
+}
+.feature p, .feature a {
+  color: #1c1c1c;
+  padding: 5px 0;
+}
+.feature a {
+  color: #b1009a;
 }
 
 .feature + .feature + .feature {
-	margin-right: 0;
-}
-
-.content h2 {
-	font-family: 'Helvetica','Arial','sans-serif';
-	font-weight: 300;
-	font-size: 48px;
-	line-height: 52px;
-	margin: 0;
-	padding: 0;
-	padding-top: 256px;	
+  margin-right: 0;
 }
 
 /* Portrait tablet and small desktops */
 @media all and (max-width: 940px) {
-	
-	.content h2 {
-		font-size: 32px;
-		line-height: 38px;
-	}
-	
-
-
-
+  .content h2 {
+    font-size: 32px;
+    line-height: 38px;
+  }
 }
-
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
-
-	.content h2 {
-		font-size: 28px;
-		line-height: 32px;
-	}
+  .content h2 {
+    font-size: 28px;
+    line-height: 32px;
+  }
 }
-
 @media (max-width: 600px) {
+  h1 {
+    padding: 0 auto;
+    position: static;
+    padding: 0 auto;
+  }
 
-	h1 {
-		padding: 0 auto;
-		position: static;
-		padding: 0 auto;
-	}
+  .content {
+    margin-left: 0;
+    margin-top: 230px;
+  }
 
-	.content {
-		margin-left: 0;
-		margin-top: 230px;
-	}
+  .sidebar {
+    height: 230px;
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: auto;
+    padding: 0;
+    width: auto;
+  }
 
-	.sidebar {
-		height: 230px;
-		left: 0;
-		right: 0;
-		top: auto;
-		bottom: auto;	
-		padding: 0;
-		width: auto;
-	}
+  .nav-menu li {
+    float: left;
+    width: 17%;
+  }
 
-	.nav-menu li {
-		float: left;
-		width: 17%;
-	}
-
-
-
-	.credits, .social-media {
-		display: none;
-	}
+  .credits, .social-media {
+    display: none;
+  }
 }
-
 /* Landscape phones and down */
-@media (max-width: 480px) {
-}
-
