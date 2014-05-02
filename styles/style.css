@@ -15,17 +15,6 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
    clear: both;
 }
 
-/* Portrait tablet and small desktops */
-@media (max-width: 940px) {
-}
-
-/* Landscape phone to portrait tablet */
-@media (max-width: 768px) {
-}
-
-/* Landscape phones and down */
-@media (max-width: 480px) {
-}
 
 * {
 	margin: 0;
@@ -35,39 +24,80 @@ ul {
 	list-style: none;
 	padding: 0;
 }
-
-.content {
+a {
+	text-decoration: none;
 }
 
-.wrapper{
+.content {
+	margin-left: 230px;
+}
+
+.wrapper {
 	max-width: 1100px;
 	margin-right: auto;
 	background-color: red;
+	height: 100%;
+	min-height: 100%;
 }
 
-
 .sidebar {
-	display: inline-block;
-	float: left;
+	position: absolute;
+	top: 0;
+	bottom: 0;
 	padding: 90px 0 30px 43px;
-	width: 215px;
+	width: 230px;
 	background: rgba(0,0,0,0.95);
+	overflow: hidden;
+}
+
+.sidebar li a { 
+	color: white;
+}
+
+.sidebar a:hover:before {
+	content: "_";
+
+}
+
+.footer {
+	position: absolute;
+
+}
+
+h1 {
+	position: absolute;
+	top: 90px;
+	left: 23px;
+	text-indent: -100000px;
+	background: url(../media/logo-ladieslearningcode.png) no-repeat;
+	
+}
+
+h1 a {
+	width: 150px;
+	height: 81px;
 }
 
 .content {
-	padding: 90px 3.45% 0 5.74%;
+	position: relative;
+	padding: 0 3.45% 0 5.74%;
 	float: left;
+	width: 80%;
 
 }
 
 .twitter {
-	float: left;
-
+	display: inline-block;
 	max-width: 25%;
+	padding-top: 90px;
 	padding-left: 1.7%;
+	position: absolute;
+	right: 30px;
+	border-left: 1px solid grey;
 }
 
 .feature {
+	margin-top: 50px;
 	float: left;
 	width: 14.9%;
 	margin-right: 6.89%;
@@ -79,8 +109,72 @@ ul {
 
 .content h2 {
 	font-family: 'Helvetica','Arial','sans-serif';
+	font-weight: 300;
 	font-size: 48px;
 	line-height: 52px;
-	padding-top: 265px;
+	margin: 0;
+	padding: 0;
+	padding-top: 256px;	
+}
+
+/* Portrait tablet and small desktops */
+@media all and (max-width: 940px) {
+	
+	.content h2 {
+		font-size: 32px;
+		line-height: 38px;
+	}
+	
+
+
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+
+	.content h2 {
+		font-size: 28px;
+		line-height: 32px;
+	}
+}
+
+@media (max-width: 600px) {
+
+	h1 {
+		padding: 0 auto;
+		position: static;
+		padding: 0 auto;
+	}
+
+	.content {
+		margin-left: 0;
+		margin-top: 230px;
+	}
+
+	.sidebar {
+		height: 230px;
+		left: 0;
+		right: 0;
+		top: auto;
+		bottom: auto;	
+		padding: 0;
+		width: auto;
+	}
+
+	.nav-menu li {
+		float: left;
+		width: 17%;
+	}
+
+
+
+	.credits, .social-media {
+		display: none;
+	}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
 }
 
