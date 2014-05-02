@@ -53,6 +53,13 @@ a {
   min-height: 100%;
 }
 
+
+
+
+/***********************************************************
+ *******************     SIDE BAR       ********************
+ ***********************************************************/
+
 .sidebar {
   position: fixed;
   z-index: 99;
@@ -65,13 +72,11 @@ a {
   h1 {
     position: absolute;
     top: 90px;
+    left: -2px;
+    padding: 75px 50px 0 0;
     text-indent: -100000px;
     background: url(../media/logo-ladieslearningcode.png) no-repeat;
-      
-    a {
-      width: 150px;
-      height: 81px;
-    } 
+     
   }//h1
 
   .nav-menu {
@@ -101,20 +106,42 @@ a {
 .footer {
   position: absolute;
   bottom: 30px;
+  
+  .social-media li {
+    //text-indent: -9999px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+
+    
+      a {
+        text-indent: -9999;
+        background-image: url(../media/icon-twitter-32x32.png) no-repeat;
+        background-position: 0px 0px;
+
+      }
+    
+  }
+  .credits {
+    font-size: $footerfontsize;
+    line-height: 19px;
+
+
+    p {
+      color: $grey;
+    }
+
+    a {
+      color: $white;
+    }
+
+  }
 }
 
-h1 {
-  position: absolute;
-  top: 90px;
-  left: 23px;
-  text-indent: -100000px;
-  background: url(../media/logo-ladieslearningcode.png) no-repeat;
-    
-  a {
-    width: 150px;
-    height: 81px;
-  } 
-}
+
+/***********************************************************
+ *******************     CONTENT        ********************
+ ***********************************************************/
 
 
 .content {
@@ -147,8 +174,8 @@ h1 {
 .feature {
   margin-top: 50px;
   float: left;
-  width: 14.9%;
-  margin-right: 6.89%;
+  width: 16%;
+  margin-right: 5%;
   font-size: $fontsize;
     
   h3, a, p {
@@ -162,20 +189,29 @@ h1 {
 
   a {
     color: $purp;
-    padding-left: 28px;
-    background: url(../media/icon-cta-25x25.png) no-repeat;
-    background-position: 0px 0px;
-    
-    &:hover {
-      background-position: -25px 0px;
+
+
+    .arrow {
+      background: url(../media/icon-cta-25x25.png) no-repeat;
+      background-position: 0 0px;
+      display:inline-block;
+      width: 25px;
+      height:25px;
+      margin-right: 2px;
+      &:hover {
+        background-position: -25px 0px;
+      }    
     }
   }
 }
 
-
-
 .feature + .feature + .feature {
   margin-right: 0;
+  margin-bottom: 50px;
+}
+
+.mobile {
+  display: none;
 }
 
 /* Portrait tablet and small desktops */
@@ -195,6 +231,13 @@ h1 {
     line-height: 32px;
   }
 }
+/****************************************************
+
+************           MEDIA           *****************
+
+***********************************************************
+ *******************     TOP NAV        ********************
+ ***********************************************************/
 
 @media (max-width: 600px) {
 
@@ -224,7 +267,12 @@ h1 {
     padding: 0;
 
     h1 {
-      padding: 50px;
+      top: 15px;
+      a {
+        display: block;
+        margin: 0 auto;
+        position: static;
+      }
     }
    
     .nav-menu {
@@ -233,7 +281,8 @@ h1 {
       ul {
 
         li {
-          display: inline-block;
+          float: left;
+          width: 20%;
         }
         
       }   
@@ -245,6 +294,10 @@ h1 {
 
   .credits, .social-media, .twitter {
     display: none;
+  }
+  
+  .mobile {
+    display: block;
   }
 
 }
