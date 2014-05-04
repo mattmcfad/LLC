@@ -254,9 +254,9 @@ a {
   width: 32px;
   height: 32px;
   display: inline-block;
+  text-indent: -9999;
 }
 .footer .social-media li a, .footer .mobile-social li a {
-  text-indent: -9999;
   width: 32px;
   height: 32px;
   background-image: url(../media/icon-twitter-32x32.png) no-repeat;
@@ -295,11 +295,15 @@ a {
 .twitter {
   display: inline-block;
   max-width: 25%;
-  padding-top: 90px;
+  padding-top: 0;
   padding-left: 1.7%;
   position: absolute;
   right: 30px;
   border-left: 1px solid grey;
+}
+
+.twitter #twitter-widget-0 {
+  max-height: 256px;
 }
 
 .feature {
@@ -347,6 +351,30 @@ a {
   right: 0;
   background: black;
   display: none;
+}
+
+/***************************************************
+&&&&&&&&&&&&&      ABOUT PAGE      &&&&&&&&&&&&&&&&&
+ ***************************************************/
+.content.about h2 {
+  padding-top: 90px;
+}
+
+.content.about .inner-wrapper {
+  max-width: 660px;
+  width: 75%;
+  float: left;
+}
+
+.content.about .we-are {
+  max-width: 220px;
+  width: 25%;
+  border-left: #808184 1px solid;
+  position: absolute;
+  right: 10px;
+  padding-left: 15px;
+  float: left;
+  margin-top: 90px;
 }
 
 /* Portrait tablet and small desktops */
