@@ -174,7 +174,7 @@ a {
 .feature {
   margin-top: 50px;
   float: left;
-  width: 16%;
+  width: 20%;
   margin-right: 5%;
   font-size: $fontsize;
     
@@ -208,9 +208,18 @@ a {
 .feature + .feature + .feature {
   margin-right: 0;
   margin-bottom: 50px;
+  padding-bottom: 150px;
 }
 
+/** mobile footer */
 .mobile {
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
   display: none;
 }
 
@@ -239,17 +248,90 @@ a {
 *******************     TOP NAV        ********************
 ***********************************************************/
 
+@media (max-width: 1000px) {
+  .content {
+    padding-right: 50px;
+  }
+
+  .twitter {
+    right: 5%;
+  }
+}
+
+
+@media (max-width: 960px) {
+  .feature {
+    width: 40%;
+  }
+
+    .twitter {
+    right: 10%;
+  }
+}
+
+@media (max-width: 875px) {
+  .twitter {
+    right: 15%;
+  }
+  .content {
+    padding-right: 100px;
+  }
+}
+
+@media (max-width: 800px) {
+
+  .twitter {
+    right: 20%;
+  }
+}
+
+@media (max-width: 750px) {
+  .twitter {
+    right: 25%;
+  }
+
+  .content {
+    padding-right: 125px;
+  }
+}
+
+@media (max-width: 700px) {
+
+
+  .twitter {
+    right: 30%;
+  }
+
+  .content {
+    padding-right: 155px;
+  }
+}
+
+/*********************************************************
+&&&&&&&&&&&&&&         TOP BAR             &&&&&&&&&&&&&&&&
+**********************************************************/
+
+ 
 @media (max-width: 600px) {
 
-  h1 {
-    padding: 0 auto;
-    position: static;
-    padding: 0 auto;
+  .content {
+    padding-right: 0;
+  }
+
+  .content h2 {
+    padding-top: 25px;
+    width: 100%;
+    line-height: 40px;
+  }
+
+  .feature {
+    width: 40%;
   }
 
   .content {
     margin-left: 0;
     margin-top: $offset;
+    width: 100%;
   }
 
   .sidebar {
@@ -263,36 +345,35 @@ a {
     background: black;
     border-bottom: 5px solid $white;
     box-shadow: 0 1px 10px $grey;
-    // transform: rotate(90deg);
     padding: 0;
 
     a h1 {
-      width: 150px;
-      height: 81px;
+      width: 190px;
+      height: 90px;
+      background-position: 0px 0px no-repeat;
       position: static;
-      margin: 0 auto;
-      display: block;
-      
-      
+      margin: 25px auto;
+      display: block; 
+      padding: 0;
 
     }
    
     ul.nav-menu {
       top: 150px;
-
-      
+      text-align: center;
 
       li {
-        display: inline-block;
+        display: inline;
         background: 1px solid yellow;
+        padding: 0 10px;
 
-      
-      }
-          
+      }          
     }//nav-menu
-
   }//sidebar
-
+  
+  .feature.mail{
+    margin-left: 30px;
+  }
 
   .credits, .social-media, .twitter {
     display: none;
@@ -300,6 +381,10 @@ a {
   
   .mobile {
     display: block;
+  }
+
+  .mobile .credits {
+    color: white;
   }
 
 }
