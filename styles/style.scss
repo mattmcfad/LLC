@@ -106,23 +106,43 @@ a {
 .footer {
   position: absolute;
   bottom: 30px;
+
+  .social-media .tweet, .mobile-social .tweet{
+    background-image: url(../media/icon-twitter-32x32.png)
+  }
+
+  .social-media .fb, .mobile-social .fb{
+    background-image: url(../media/icon-facebook-32x32.png)
+  }
+
+  .social-media .email, .mobile-social .email{
+    background-image: url(../media/icon-email-32x32.png)
+  }
+
+  .social-media .RSS, .mobile-social .RSS{
+    background-image: url(../media/icon-rss-32x32.png)
+  }
+
+  .credits {
+    padding-top: 10px;
+  }
   
-  .social-media li {
+  .social-media li, .mobile-social li {
     //text-indent: -9999px;
-    width: 25px;
-    height: 25px;
+    width: 32px;
+    height: 32px;
     display: inline-block;
 
-    
       a {
         text-indent: -9999;
+        width: 32px;
+        height: 32px;
         background-image: url(../media/icon-twitter-32x32.png) no-repeat;
         background-position: 0px 0px;
 
-      }
-    
+      }   
   }
-  .credits {
+  .credits, .mobile-credits {
     font-size: $footerfontsize;
     line-height: 19px;
 
@@ -335,6 +355,7 @@ a {
   }
 
   .sidebar {
+    position: absolute;
     height: $offset;
     width: 100%;
     left: 0;
@@ -379,8 +400,25 @@ a {
     display: none;
   }
   
-  .mobile {
+  .mobile, .mobile-social, .mobile-credits {
     display: block;
+  }
+
+  .mobile-social, .mobile-credits {
+    padding-left: 20px;
+  }
+
+  .mobile-social {
+    padding-top: 60px;
+    padding-bottom: 20px;
+  }
+
+  .mobile-credits ul li {
+    color: $grey;
+  }
+
+  .footer {
+    position: relative;
   }
 
   .mobile .credits {

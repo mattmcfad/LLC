@@ -235,24 +235,41 @@ a {
   position: absolute;
   bottom: 30px;
 }
-.footer .social-media li {
-  width: 25px;
-  height: 25px;
+.footer .social-media .tweet, .footer .mobile-social .tweet {
+  background-image: url(../media/icon-twitter-32x32.png);
+}
+.footer .social-media .fb, .footer .mobile-social .fb {
+  background-image: url(../media/icon-facebook-32x32.png);
+}
+.footer .social-media .email, .footer .mobile-social .email {
+  background-image: url(../media/icon-email-32x32.png);
+}
+.footer .social-media .RSS, .footer .mobile-social .RSS {
+  background-image: url(../media/icon-rss-32x32.png);
+}
+.footer .credits {
+  padding-top: 10px;
+}
+.footer .social-media li, .footer .mobile-social li {
+  width: 32px;
+  height: 32px;
   display: inline-block;
 }
-.footer .social-media li a {
+.footer .social-media li a, .footer .mobile-social li a {
   text-indent: -9999;
+  width: 32px;
+  height: 32px;
   background-image: url(../media/icon-twitter-32x32.png) no-repeat;
   background-position: 0px 0px;
 }
-.footer .credits {
+.footer .credits, .footer .mobile-credits {
   font-size: 9px;
   line-height: 19px;
 }
-.footer .credits p {
+.footer .credits p, .footer .mobile-credits p {
   color: #808184;
 }
-.footer .credits a {
+.footer .credits a, .footer .mobile-credits a {
   color: white;
 }
 
@@ -428,6 +445,7 @@ a {
   }
 
   .sidebar {
+    position: absolute;
     height: 230px;
     width: 100%;
     left: 0;
@@ -467,8 +485,25 @@ a {
     display: none;
   }
 
-  .mobile {
+  .mobile, .mobile-social, .mobile-credits {
     display: block;
+  }
+
+  .mobile-social, .mobile-credits {
+    padding-left: 20px;
+  }
+
+  .mobile-social {
+    padding-top: 60px;
+    padding-bottom: 20px;
+  }
+
+  .mobile-credits ul li {
+    color: #808184;
+  }
+
+  .footer {
+    position: relative;
   }
 
   .mobile .credits {
