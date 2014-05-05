@@ -1,14 +1,19 @@
+/* @author Matt McFadyen 
+ * style.css 
+ * ladies learning code - index.html & about.html
+ */
+
 $white: #ffffff;
 $purp: #B1009A;
 $grey: #808184;
-$offset: 230px;
+
+$offset: 230px; //nav bar
 
 $fontsize: 20px;
 $footerfontsize: 9px;
-
 $weight: 300;
 
-
+$pic-width: 220px;
 
 *, *:before, *:after {
   -webkit-box-sizing: border-box; 
@@ -41,20 +46,18 @@ a {
   text-decoration: none;
 }
 
-
 .wrapper {
-  max-width: 1100px;
+  max-width: 1100px; 
   height: 100%;
   min-height: 100%;
 }
-
-
 
 
 /***********************************************************
  *******************     SIDE BAR       ********************
  ***********************************************************/
 
+//entire sidebar
 .sidebar {
   position: fixed;
   z-index: 99;
@@ -69,11 +72,11 @@ a {
     top: 90px;
     left: -2px;
     padding: 75px 50px 0 0;
-    text-indent: -100000px;
+    text-indent: -100000px; //get that txt outta herr 
     background: url(../media/logo-ladieslearningcode.png) no-repeat;
-     
   }//h1
 
+  //navigational links
   .nav-menu {
     position: absolute;
     top: 265px;
@@ -85,7 +88,8 @@ a {
         font-size: $fontsize;
         color: $white;
         font-weight: $weight; 
-          
+        
+        //too deep? hell na.
         &:hover {
           color: $purp;
 
@@ -102,11 +106,11 @@ a {
   position: absolute;
   bottom: 30px;
 
-  
   .social-media {
     background-position: 0px 0px;
   }
 
+  //I know there probably is a better way to select the hover....  
   .social-media .tweet, .mobile-social .tweet{
     background-image: url(../media/icon-twitter-32x32.png);
     &:hover {
@@ -139,7 +143,6 @@ a {
     padding-top: 10px;
   }
 
-
   .social-media li, .mobile-social li {
     width: 32px;
     height: 32px;
@@ -149,13 +152,11 @@ a {
         color: transparent;
         font-size: 25px;
         background-position: 0px 0px;
-
       }   
   }
   .credits, .mobile-credits {
     font-size: $footerfontsize;
     line-height: 19px;
-
 
     p {
       color: $grey;
@@ -164,22 +165,17 @@ a {
     a {
       color: $white;
     }
-
   }
 }//footer
-
 
 /***********************************************************
  *******************     CONTENT        ********************
  ***********************************************************/
 
-
 .content {
   position: relative;
-  // padding: 0 3.45% 0 5.74%;
   float: left;
- // width: 80%;
- padding: 0 30px 0 $offset + 50px;
+  padding: 0 30px 0 $offset + 50px;
   
   h2 {
     font-family: 'Helvetica','Arial','sans-serif';
@@ -190,7 +186,7 @@ a {
     padding: 0;
     padding-top: 256px; 
   }
-}
+}//content
 
 .twitter {
   display: inline-block;
@@ -224,7 +220,7 @@ a {
 
   a {
     color: $purp;
-
+    
     .arrow {
       background: url(../media/icon-cta-25x25.png) no-repeat;
       background-position: 0px 0px;
@@ -232,12 +228,13 @@ a {
       width: 25px;
       height:25px;
       margin-right: 2px;
+     
       &:hover {
         background-position: -25px 0px;
       }    
-    }
-  }
-}
+    }//arrow
+  }//a 
+}//Feature
 
 .feature.dev {
   margin-right: 75px;
@@ -266,7 +263,6 @@ a {
   height: 150px;
   background: black;
   display: none;
-
 }
 
 /***************************************************
@@ -285,7 +281,7 @@ a {
 }
 
 .content.about .we-are {
-  max-width: 220px;
+  max-width: $pic-width; //picture width
   width: 25%;
   border-left: $grey 1px solid;
   padding-left: 15px;
@@ -295,44 +291,42 @@ a {
   font-weight: $weight;
 }
 
+//"We are"
 .largefont {
   font-size: 28px;
   color: black;
 }
 
 .gallery {
-  padding-left: 220px; //start inside shadow
+  padding-left: $offset - 10px; //start inside shadow
   max-width: 1100px;
   width: 100%;
 
   .photo {
     position: relative;
-    max-width: 220px;
+    max-width: $pic-width;
     width: 33%;
     float: left;
     background-image: url(../media/about/01-HeatherPayne.jpg);
-    height: 220px;
+    height: $pic-width;
     background-position: 0px 0px;
+    
     &:hover {
-      background-position: 220px 0px;
+      background-position: $pic-width 0px;
     }
 
-
- 
-
-    p {
+    p { //Name
       position: absolute;
       bottom: 15px;
       color: white;
       font-size: 16px;
       background-color: rgba(0,0,0,0.9);
     }
-    p + p {
+    p + p { //Twitter handle
       bottom: 0;
       font-size: 14px;
       color: $purp;
     }
-
   }
   .photo.p2{
     background-image: url(../media/about/02-PearlChen.jpg);
@@ -384,16 +378,17 @@ a {
   }
   .photo.p18{
     background-image: url(../media/about/18-ZahraSakkejha.jpg);
-    margin-bottom: 50px;
   }
-
-}
+}//Gallery
 
 
 /**********************************************************
 
-************           MEDIA           ********************/
 
+**************       MEDIA QUERIES         ****************
+
+
+***********************************************************/
 
  // Break apart features from 3 colums to 2 and 1
 @media (max-width: 960px) {
@@ -404,9 +399,10 @@ a {
   .feature.dev {
     margin-right: 0;
   }
-}
+}//960px
 
 /* Portrait tablet and small desktops */
+//bump down header side a bit
 @media all and (max-width: 940px) {
   
   .content h2 {
@@ -418,7 +414,7 @@ a {
     font-size: 32px;
     line-height: 40px;
   }
-}
+}//940px
 
 // ABOUT PAGE
 //break off "We Are into block level"
@@ -427,6 +423,7 @@ a {
 
   .content.about .inner-wrapper {
     width: 100%;
+    
     h2 {
       padding-bottom: 0;
     }
@@ -439,8 +436,10 @@ a {
     border-left: none;
     border-top: 1px $grey solid;
     margin-bottom: 40px;
+    
     ul {
       text-align: center;
+      
       li {
         display: inline;
         padding: 10px;
@@ -451,26 +450,27 @@ a {
   .gallery .photo {
     width: 50%;
   }
-
-}
+}//800px
 
 /* Landscape phone to portrait tablet */
+//Bump down main page Header font a bit
 @media (max-width: 768px) {
 
   .content h2 {
     font-size: 28px;
     line-height: 32px;
   }
-}
+}//768px
 
 
 
-// Move from side nav to Top nav
 /*********************************************************
-&&&&&&&&&&&&&&         TOP BAR             &&&&&&&&&&&&&&&&
+                       TOP BAR            
+                     600px  width           
 **********************************************************/
+ // Move from side nav to Top nav
+ //probably some overlap in CSS here...
 
- 
 @media (max-width: 600px) {
 
   .content {
@@ -515,7 +515,6 @@ a {
       margin: 25px auto;
       display: block; 
       padding: 0;
-
     }
    
     ul.nav-menu {
@@ -526,14 +525,9 @@ a {
         display: inline;
         background: 1px solid yellow;
         padding: 0 10px;
-
       }          
     }//nav-menu
   }//sidebar
-  
-  .feature.mail{
-    // margin-left: 30px;
-  }
 
   .credits, .social-media, .twitter {
     display: none;
@@ -563,11 +557,10 @@ a {
   .mobile .credits {
     color: white;
   }
-
-
-
-  //ABOUT PAGE
-
+  
+  /*********************************************
+  //         ABOUT PAGE
+  **********************************************/
   .content.about {
     h2{
       font-size: 30px;
@@ -580,25 +573,25 @@ a {
     bottom: 0;
     left: 0;
     right: 0;
-
   }
-
 
   .mobile-about .footer {
     height: 150px;
-
   }
-
 
   .gallery {
     padding-left: 0;
+
     .photo {
       width: 50%;
       margin: 0 30%;
     }
-  }
 
-}
+    .photo.p18 {
+      margin-bottom: 50px;
+    }
+  }//Gallery
+}//600px @media
 
 
 

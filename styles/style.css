@@ -1,3 +1,7 @@
+/* @author Matt McFadyen 
+ * style.css 
+ * ladies learning code - index.html & about.html
+ */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -480,12 +484,15 @@ a {
 }
 .gallery .photo.p18 {
   background-image: url(../media/about/18-ZahraSakkejha.jpg);
-  margin-bottom: 50px;
 }
 
 /**********************************************************
 
-************           MEDIA           ********************/
+
+**************       MEDIA QUERIES         ****************
+
+
+***********************************************************/
 @media (max-width: 960px) {
   .feature {
     width: 40%;
@@ -543,7 +550,8 @@ a {
   }
 }
 /*********************************************************
-&&&&&&&&&&&&&&         TOP BAR             &&&&&&&&&&&&&&&&
+                       TOP BAR            
+                     600px  width           
 **********************************************************/
 @media (max-width: 600px) {
   .content {
@@ -628,6 +636,9 @@ a {
     color: white;
   }
 
+  /*********************************************
+  //         ABOUT PAGE
+  **********************************************/
   .content.about h2 {
     font-size: 30px;
   }
@@ -650,5 +661,8 @@ a {
   .gallery .photo {
     width: 50%;
     margin: 0 30%;
+  }
+  .gallery .photo.p18 {
+    margin-bottom: 50px;
   }
 }
