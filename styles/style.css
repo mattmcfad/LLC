@@ -346,6 +346,13 @@ a {
   display: none;
 }
 
+.mobile-about {
+  width: 100%;
+  height: 150px;
+  background: black;
+  display: none;
+}
+
 /***************************************************
 &&&&&&&&&&&&&      ABOUT PAGE      &&&&&&&&&&&&&&&&&
  ***************************************************/
@@ -376,30 +383,101 @@ a {
   color: black;
 }
 
+.gallery {
+  padding-left: 220px;
+  max-width: 1100px;
+  width: 100%;
+}
+.gallery .photo {
+  position: relative;
+  max-width: 220px;
+  width: 33%;
+  float: left;
+  background-image: url(../media/about/01-HeatherPayne.jpg);
+  height: 220px;
+  background-position: 0px 0px;
+}
+.gallery .photo:hover {
+  background-position: 220px 0px;
+}
+.gallery .photo p {
+  position: absolute;
+  bottom: 15px;
+  color: white;
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.gallery .photo p + p {
+  bottom: 0;
+  font-size: 14px;
+  color: #b1009a;
+}
+.gallery .photo.p2 {
+  background-image: url(../media/about/02-PearlChen.jpg);
+}
+.gallery .photo.p3 {
+  background-image: url(../media/about/03-MelissaCrnic.jpg);
+}
+.gallery .photo.p4 {
+  background-image: url(../media/about/04-KatherineDuffy.jpg);
+}
+.gallery .photo.p5 {
+  background-image: url(../media/about/05-KimGardner.jpg);
+}
+.gallery .photo.p6 {
+  background-image: url(../media/about/06-JessicaHazen.jpg);
+}
+.gallery .photo.p7 {
+  background-image: url(../media/about/07-VivianHui.jpg);
+}
+.gallery .photo.p8 {
+  background-image: url(../media/about/08-JaniceJoo.jpg);
+}
+.gallery .photo.p9 {
+  background-image: url(../media/about/09-AnnaKlibanov.jpg);
+}
+.gallery .photo.p10 {
+  background-image: url(../media/about/10-VickiLaszlo.jpg);
+}
+.gallery .photo.p11 {
+  background-image: url(../media/about/11-RochelleLatinsky.jpg);
+}
+.gallery .photo.p12 {
+  background-image: url(../media/about/12-MariaMarino.jpg);
+}
+.gallery .photo.p13 {
+  background-image: url(../media/about/13-BethMartin.jpg);
+}
+.gallery .photo.p14 {
+  background-image: url(../media/about/14-AmritaMathur.jpg);
+}
+.gallery .photo.p15 {
+  background-image: url(../media/about/15-LauraPlant.jpg);
+}
+.gallery .photo.p16 {
+  background-image: url(../media/about/16-CrystalPrestonWatson.jpg);
+}
+.gallery .photo.p17 {
+  background-image: url(../media/about/17-NicoleRashotte.jpg);
+}
+.gallery .photo.p18 {
+  background-image: url(../media/about/18-ZahraSakkejha.jpg);
+  margin-bottom: 50px;
+}
+
 /**********************************************************
 
-************           MEDIA           ********************
-
+************           MEDIA           ********************/
+@media (max-width: 960px) {
+  .feature {
+    width: 40%;
+  }
+}
 /* Portrait tablet and small desktops */
 @media all and (max-width: 940px) {
   .content h2 {
     font-size: 32px;
     line-height: 38px;
-  }
-}
-/* Landscape phone to portrait tablet */
-@media (max-width: 768px) {
-  .content h2 {
-    font-size: 28px;
-    line-height: 32px;
-  }
-}
-/**********************************************************
-*******************     TOP NAV        ********************
-***********************************************************/
-@media (max-width: 960px) {
-  .feature {
-    width: 40%;
   }
 }
 @media (max-width: 800px) {
@@ -413,6 +491,7 @@ a {
     max-width: none;
     border-left: none;
     border-top: 1px #808184 solid;
+    margin-bottom: 40px;
   }
   .content.about .we-are ul {
     text-align: center;
@@ -420,6 +499,17 @@ a {
   .content.about .we-are ul li {
     display: inline;
     padding: 10px;
+  }
+
+  .gallery .photo {
+    width: 50%;
+  }
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .content h2 {
+    font-size: 28px;
+    line-height: 32px;
   }
 }
 /*********************************************************
@@ -510,5 +600,29 @@ a {
 
   .mobile .credits {
     color: white;
+  }
+
+  .content.about h2 {
+    font-size: 30px;
+  }
+
+  .mobile-about {
+    position: static;
+    display: block;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .mobile-about .footer {
+    height: 150px;
+  }
+
+  .gallery {
+    padding-left: 0;
+  }
+  .gallery .photo {
+    width: 50%;
+    margin: 0 30%;
   }
 }

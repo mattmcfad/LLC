@@ -242,6 +242,14 @@ a {
   display: none;
 }
 
+.mobile-about {
+  width: 100%;
+  height: 150px;
+  background: black;
+  display: none;
+
+}
+
 /***************************************************
 &&&&&&&&&&&&&      ABOUT PAGE      &&&&&&&&&&&&&&&&&
  ***************************************************/
@@ -272,10 +280,107 @@ a {
   color: black;
 }
 
+.gallery {
+  padding-left: 220px; //start inside shadow
+  max-width: 1100px;
+  width: 100%;
+
+  .photo {
+    position: relative;
+    max-width: 220px;
+    width: 33%;
+    float: left;
+    background-image: url(../media/about/01-HeatherPayne.jpg);
+    height: 220px;
+    background-position: 0px 0px;
+    &:hover {
+      background-position: 220px 0px;
+    }
+
+
+ 
+
+    p {
+      position: absolute;
+      bottom: 15px;
+      color: white;
+      font-size: 16px;
+      background-color: rgba(0,0,0,0.9);
+    }
+    p + p {
+      bottom: 0;
+      font-size: 14px;
+      color: $purp;
+    }
+
+  }
+  .photo.p2{
+    background-image: url(../media/about/02-PearlChen.jpg);
+  }
+  .photo.p3{
+    background-image: url(../media/about/03-MelissaCrnic.jpg);
+  }
+  .photo.p4{
+    background-image: url(../media/about/04-KatherineDuffy.jpg);
+  }
+  .photo.p5{
+    background-image: url(../media/about/05-KimGardner.jpg);
+  }
+  .photo.p6{
+    background-image: url(../media/about/06-JessicaHazen.jpg);
+  }
+  .photo.p7{
+    background-image: url(../media/about/07-VivianHui.jpg);
+  }
+  .photo.p8{
+    background-image: url(../media/about/08-JaniceJoo.jpg);
+  }
+  .photo.p9{
+    background-image: url(../media/about/09-AnnaKlibanov.jpg);
+  }
+  .photo.p10{
+    background-image: url(../media/about/10-VickiLaszlo.jpg);
+  }
+  .photo.p11{
+    background-image: url(../media/about/11-RochelleLatinsky.jpg);
+  }
+  .photo.p12{
+    background-image: url(../media/about/12-MariaMarino.jpg);
+  }
+  .photo.p13{
+    background-image: url(../media/about/13-BethMartin.jpg);
+  }
+  .photo.p14{
+    background-image: url(../media/about/14-AmritaMathur.jpg);
+  }
+  .photo.p15{
+    background-image: url(../media/about/15-LauraPlant.jpg);
+  }
+  .photo.p16{
+    background-image: url(../media/about/16-CrystalPrestonWatson.jpg);
+  }
+  .photo.p17{
+    background-image: url(../media/about/17-NicoleRashotte.jpg);
+  }
+  .photo.p18{
+    background-image: url(../media/about/18-ZahraSakkejha.jpg);
+    margin-bottom: 50px;
+  }
+
+}
+
 
 /**********************************************************
 
-************           MEDIA           ********************
+************           MEDIA           ********************/
+
+
+ // Break apart features from 3 colums to 2 and 1
+@media (max-width: 960px) {
+  .feature {
+    width: 40%;
+  }
+}
 
 /* Portrait tablet and small desktops */
 @media all and (max-width: 940px) {
@@ -286,30 +391,7 @@ a {
   }
 }
 
-/* Landscape phone to portrait tablet */
-@media (max-width: 768px) {
-
-  .content h2 {
-    font-size: 28px;
-    line-height: 32px;
-  }
-}
-
-/**********************************************************
-*******************     TOP NAV        ********************
-***********************************************************/
-
-
-
-
- // Break apart features from 3 colums to 2 and 1
-@media (max-width: 960px) {
-  .feature {
-    width: 40%;
-  }
-}
-
-
+// ABOUT PAGE
 //break off "We Are into block level"
 //switch the list to inline...
 @media (max-width: 800px) {
@@ -324,6 +406,7 @@ a {
     max-width: none;
     border-left: none;
     border-top: 1px $grey solid;
+    margin-bottom: 40px;
     ul {
       text-align: center;
       li {
@@ -332,7 +415,23 @@ a {
       }
     }
   }
+
+  .gallery .photo {
+    width: 50%;
+  }
+
 }
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+
+  .content h2 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+
+
 
 // Move from side nav to Top nav
 /*********************************************************
@@ -431,6 +530,40 @@ a {
 
   .mobile .credits {
     color: white;
+  }
+
+
+
+  //ABOUT PAGE
+
+  .content.about {
+    h2{
+      font-size: 30px;
+    }
+  }
+
+  .mobile-about {
+    position: static;
+    display: block;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+  }
+
+
+  .mobile-about .footer {
+    height: 150px;
+
+  }
+
+
+  .gallery {
+    padding-left: 0;
+    .photo {
+      width: 50%;
+      margin: 0 30%;
+    }
   }
 
 }
