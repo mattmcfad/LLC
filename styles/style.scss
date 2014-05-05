@@ -220,6 +220,7 @@ a {
 
   a {
     color: $purp;
+
     
     .arrow {
       background: url(../media/icon-cta-25x25.png) no-repeat;
@@ -227,7 +228,8 @@ a {
       display:inline-block;
       width: 25px;
       height:25px;
-      margin-right: 2px;
+      margin-right: 2px; //move away from text
+      vertical-align: middle; //align with text
      
       &:hover {
         background-position: -25px 0px;
@@ -240,6 +242,7 @@ a {
   margin-right: 75px;
 }
 
+//lazy way of targeting .dev -_-
 .feature + .feature + .feature {
   margin-right: 0;
   margin-bottom: 50px;

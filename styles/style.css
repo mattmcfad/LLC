@@ -340,6 +340,7 @@ a {
   width: 25px;
   height: 25px;
   margin-right: 2px;
+  vertical-align: middle;
 }
 .feature a .arrow:hover {
   background-position: -25px 0px;
