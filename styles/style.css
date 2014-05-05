@@ -229,17 +229,32 @@ a {
   position: absolute;
   bottom: 30px;
 }
+.footer .social-media {
+  background-position: 0px 0px;
+}
 .footer .social-media .tweet, .footer .mobile-social .tweet {
   background-image: url(../media/icon-twitter-32x32.png);
+}
+.footer .social-media .tweet:hover, .footer .mobile-social .tweet:hover {
+  background-position: 32px 0;
 }
 .footer .social-media .fb, .footer .mobile-social .fb {
   background-image: url(../media/icon-facebook-32x32.png);
 }
+.footer .social-media .fb:hover, .footer .mobile-social .fb:hover {
+  background-position: 32px 0;
+}
 .footer .social-media .email, .footer .mobile-social .email {
   background-image: url(../media/icon-email-32x32.png);
 }
+.footer .social-media .email:hover, .footer .mobile-social .email:hover {
+  background-position: 32px 0;
+}
 .footer .social-media .RSS, .footer .mobile-social .RSS {
   background-image: url(../media/icon-rss-32x32.png);
+}
+.footer .social-media .RSS:hover, .footer .mobile-social .RSS:hover {
+  background-position: 32px 0;
 }
 .footer .credits {
   padding-top: 10px;
@@ -248,12 +263,10 @@ a {
   width: 32px;
   height: 32px;
   display: inline-block;
-  text-indent: -9999;
 }
 .footer .social-media li a, .footer .mobile-social li a {
-  width: 32px;
-  height: 32px;
-  background-image: url(../media/icon-twitter-32x32.png) no-repeat;
+  color: transparent;
+  font-size: 25px;
   background-position: 0px 0px;
 }
 .footer .credits, .footer .mobile-credits {
@@ -328,6 +341,10 @@ a {
   background-position: -25px 0px;
 }
 
+.feature.dev {
+  margin-right: 75px;
+}
+
 .feature + .feature + .feature {
   margin-right: 0;
   margin-bottom: 50px;
@@ -359,6 +376,7 @@ a {
 .content.about h2 {
   padding-top: 90px;
   font-size: 38px;
+  padding-bottom: 50px;
 }
 
 .content.about .inner-wrapper {
@@ -472,6 +490,10 @@ a {
   .feature {
     width: 40%;
   }
+
+  .feature.dev {
+    margin-right: 0;
+  }
 }
 /* Portrait tablet and small desktops */
 @media all and (max-width: 940px) {
@@ -479,10 +501,18 @@ a {
     font-size: 32px;
     line-height: 38px;
   }
+
+  .content.about h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
 }
 @media (max-width: 800px) {
   .content.about .inner-wrapper {
     width: 100%;
+  }
+  .content.about .inner-wrapper h2 {
+    padding-bottom: 0;
   }
 
   .content.about .we-are {
@@ -567,10 +597,6 @@ a {
     display: inline;
     background: 1px solid yellow;
     padding: 0 10px;
-  }
-
-  .feature.mail {
-    margin-left: 30px;
   }
 
   .credits, .social-media, .twitter {

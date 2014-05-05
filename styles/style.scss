@@ -102,37 +102,52 @@ a {
   position: absolute;
   bottom: 30px;
 
+  
+  .social-media {
+    background-position: 0px 0px;
+  }
+
   .social-media .tweet, .mobile-social .tweet{
-    background-image: url(../media/icon-twitter-32x32.png)
+    background-image: url(../media/icon-twitter-32x32.png);
+    &:hover {
+      background-position: 32px 0;
+    }
   }
 
   .social-media .fb, .mobile-social .fb{
-    background-image: url(../media/icon-facebook-32x32.png)
+    background-image: url(../media/icon-facebook-32x32.png);
+    &:hover {
+      background-position: 32px 0;
+    }
   }
 
   .social-media .email, .mobile-social .email{
-    background-image: url(../media/icon-email-32x32.png)
+    background-image: url(../media/icon-email-32x32.png);
+    &:hover {
+      background-position: 32px 0;
+    }
   }
 
   .social-media .RSS, .mobile-social .RSS{
-    background-image: url(../media/icon-rss-32x32.png)
+    background-image: url(../media/icon-rss-32x32.png);
+    &:hover {
+      background-position: 32px 0;
+    }
   }
 
   .credits {
     padding-top: 10px;
   }
-  
+
+
   .social-media li, .mobile-social li {
-    //text-indent: -9999px;
     width: 32px;
     height: 32px;
     display: inline-block;
-    text-indent: -9999;
 
       a {
-        width: 32px;
-        height: 32px;
-        background-image: url(../media/icon-twitter-32x32.png) no-repeat;
+        color: transparent;
+        font-size: 25px;
         background-position: 0px 0px;
 
       }   
@@ -151,7 +166,7 @@ a {
     }
 
   }
-}
+}//footer
 
 
 /***********************************************************
@@ -224,6 +239,10 @@ a {
   }
 }
 
+.feature.dev {
+  margin-right: 75px;
+}
+
 .feature + .feature + .feature {
   margin-right: 0;
   margin-bottom: 50px;
@@ -256,6 +275,7 @@ a {
 .content.about h2 {
   padding-top: 90px;
   font-size: 38px;
+  padding-bottom: 50px;
 }
 
 .content.about .inner-wrapper {
@@ -380,6 +400,10 @@ a {
   .feature {
     width: 40%;
   }
+
+  .feature.dev {
+    margin-right: 0;
+  }
 }
 
 /* Portrait tablet and small desktops */
@@ -388,6 +412,11 @@ a {
   .content h2 {
     font-size: 32px;
     line-height: 38px;
+  }
+
+  .content.about h2 {
+    font-size: 32px;
+    line-height: 40px;
   }
 }
 
@@ -398,6 +427,9 @@ a {
 
   .content.about .inner-wrapper {
     width: 100%;
+    h2 {
+      padding-bottom: 0;
+    }
   }
 
   .content.about .we-are {
@@ -500,7 +532,7 @@ a {
   }//sidebar
   
   .feature.mail{
-    margin-left: 30px;
+    // margin-left: 30px;
   }
 
   .credits, .social-media, .twitter {
